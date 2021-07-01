@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Niveau élève{% endblock %}
+
+{% block body %}
+<div class="content">
+<div class="title"> Les cours de cette matière </div>
+
+{% for course in cours %}
+<p>
+  <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseExample{{course.id}}" aria-expanded="false" aria-controls="collapseExample{{course.id}}">
+    {{course.title}}
+  </button>
+</p>
+
+<div class="collapse" id="collapseExample{{course.id}}">
+
+  <div class="card card-body">
+
+  <div class="mat"><a href="{{path('cours_pdf',{ 'id' : course.id})}}">{{course.title}}<a></div>
+  
+
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

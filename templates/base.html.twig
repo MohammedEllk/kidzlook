@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        {% block stylesheets %}
+             {{encore_entry_link_tags('app')}}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+            
+            
+            
+        {% endblock %}
+
+    </head>
+    <body>
+        {{include('layouts/partials/_nav.html.twig')}}
+        {% block body %}{% endblock %}
+        
+        {% block javascripts %}
+        {{encore_entry_script_tags('app')}}
+        <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/v4-shims.js"></script>
+        
+        {% endblock %}
+            
+           
+                        
+                    
+                          
+					   
+            <div class="footer px-1 bg-white text-center">
+                Copyright © 2020 MedLook. All rights reserved
+            </div>
+        </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KidzLook{% endblock %}
+
+{% block body %}
+<div class="container justify-content-md-center px-5">
+<center><h1>{{entity}}</h1></center>
+{{form_start(form)}}
+{{form_widget(form)}}
+<button type="submit" class="btn btn-success" >Enregistrer les donnés</button>
+{{form_end(form)}}
+</div>
+{% endblock %}

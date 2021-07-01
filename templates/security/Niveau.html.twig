@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Niveau élève{% endblock %}
+
+{% block body %}
+<div class="content">
+<div class="title"> Les niveaux </div>
+
+
+<div class="list-group">
+{% for niveaux in niveau %}
+<a href="{{path('Matiere', { id: niveaux.id })}}" class="list-group-item list-group-item-action list-group-item-primary">{{niveaux.getTitle}}</a>
+{% endfor %}
+</div>
+
+</div>
+
+
+{% endblock %}

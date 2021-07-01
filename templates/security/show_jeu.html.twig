@@ -1,0 +1,55 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Les Jeux{% endblock %}
+
+{% block body %}
+<div class="content">
+<div id="idchoix">
+
+<a id="choix" class="btn btn-success" href="{{path('Create_Jeu')}}" role="button">Ajouter un Jeu</a>
+<a id="choix" class="btn btn-success" href="{{path('Create_Question')}}" role="button">Ajouter Une Question</a>
+
+</div>
+{% for jeux in jeu %} 
+<p>
+  <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseExample{{jeux.id}}" aria-expanded="false" aria-controls="collapseExample{{jeux.id}}">
+   {{jeux.getTitle}}
+  </button>
+  <li class="list-inline-item">
+  <a href="{{path('Edit_Jeu', { id: jeux.id })}}" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+  </li>
+  <li class="list-inline-item">
+  <a href="{{path('Delete_Jeu', { id: jeux.id })}}" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+  </li>
+</p>
+<div class="collapse" id="collapseExample{{jeux.id}}">
+
+{% for question in jeux.getQuestion %}
+
+
+<div class="card card-body">
+
+<div class="mat"> {{question.id}} :  {{question.getTitle}}
+  <div id="icon">
+  <li class="list-inline-item">
+  <a href="{{path('Edit_Question', { id: question.id })}}" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+  </li>
+  <li class="list-inline-item">
+  <a href="{{path('Delete_Question', { id: question.id })}}" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+  </li>
+  </div>
+</div>
+
+</div>
+
+
+
+
+{% endfor %}
+
+</div>
+{% endfor %}
+
+</div>
+
+{% endblock %}

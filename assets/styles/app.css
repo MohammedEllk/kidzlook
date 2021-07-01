@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "../../node_modules/bootstrap";
+
+ 
+
+body {
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+#cr {
+    display: block;
+    width : 200px;
+    height: 3
+    0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding : 30px;
+    margin:   50px;
+   
+}
+#cr p{
+    text-align: center;
+    justify-content: center;
+}
+
+.content {
+    
+    width: 1024px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    
+}
+.cont{
+    width: 424px;
+    border: 1px solid rgba(58, 199, 255, 0.692);
+    box-shadow: 0px 2px 10px rgba(83, 29, 29, 0.932);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: inline-block;
+}
+.headb{
+    width: 424px;
+    height: 50px;
+    border: 1px solid rgba(8, 22, 27, 0.692);
+    box-shadow: 0px 2px 10px rgba(199, 141, 141, 0.932);
+    border-radius: 10px;
+}
+.bodyp{
+    width: 424px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    box-shadow: 0px 2px 10px rgba(15, 1, 1, 0.932);
+    border-radius: 10px;
+}
+.title {
+
+    position: relative;
+    background-color: rgb(150, 237, 248);
+    color: rgb(0, 0, 0);
+    margin : 20px;
+    padding: 20px;
+    font-size: 1.8em;
+    border-radius: 5px;
+}
+#idchoix {
+    width: 724px;
+    height: 200px;
+    border: 1px solid rgba(96, 248, 8, 0.2);
+    margin-left: 80px;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: 0px 2px 10px rgba(57, 193, 247, 0.1);
+    text-align: center;
+}
+#choix{
+    border : 20px;
+    margin : 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+#choixun{
+    border : 20px;
+    margin : 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.titleofquestion{
+    width : 550px;
+    height: 100px;
+    border: 1px solid rgba(2, 180, 250, 0.2);
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(16, 20, 228, 0.863);
+    padding  : 30px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.choixdequest{
+    display: block;
+    width : 250px;
+    height: 120px;
+    border: 1px solid rgba(103, 231, 18, 0.2);
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(3, 176, 245, 0.938);
+    padding  : 30px;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+.nextquest{
+    width : 100px;
+    height: 70px;
+    border: 1px solid rgba(7, 3, 255, 0.979);
+    border-radius: 10px;
+    margin: auto;
+    margin-top : 20px;
+}
+
+
+
+
+.mat{
+
+    border: 1px solid rgba(96, 248, 8, 0.2);
+    padding : 20px;
+    box-shadow: 0px 2px 10px rgba(57, 193, 247, 0.1);
+    margin: 10px;
+
+}
+.cours
+{
+    width: 524px;
+    border: 1px solid rgba(60, 15, 112, 0.973);
+    margin-left : 30px;
+    padding : 10px;
+    box-shadow: 0px 2px 10px rgba(255, 11, 113, 0.1);
+    text-align: center; 
+}
+#icon{
+    text-align: right;
+}
+.cas_li>.form-group{
+    margin-bottom: 0rem;
+}
+ul fieldset{
+    display: block;
+}
+.cas_li{
+    padding: 1% 5%;
+}
+.cas_li:last-child{
+    padding: 0%;
+    margin-top: 1%;
+}
+.navbar{
+    margin:0;
+    color:#fff;
+    height:80px ;
+}
+.navbar a{
+    color:#fff;
+    margin-bottom:3px;
+}
+.navbar a:hover{
+    background:none !important;
+    border-bottom:rgb(7, 255, 201) 3px solid;
+    margin-bottom:0;
+}
+#leftSide{
+    height: 100%;
+    width: 200px;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    background-color: rgba(241, 30, 189, 0.288);
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    
+}
+#righttSide{
+    height: 100%;
+    width: 200px;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    background-color: rgb(233, 127, 127);
+    padding-top: 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+
+}
+#clc{
+    clear:both;
+}
+
+#main{
+    text-align: center;
+    display: block;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Espace Etudiants{% endblock %}
+
+{% block body %}
+
+<center><h2> Bienvenu dans L'espace étudiant laquelles des Options vous voulez choisir ?</h2></center>
+<center>
+<div id="but">
+
+<a href="{{path('Niveau')}}" type="button" class="list-group-item list-group-item-action list-group-item-primary">Cours<p></p></a>
+
+<a href="{{path('show_quest')}}" type="button" class="list-group-item list-group-item-action list-group-item-primary"><p>Jeux</p></a>
+
+
+</div>
+</center>
+
+
+{% endblock %}

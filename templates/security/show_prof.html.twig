@@ -1,0 +1,43 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Les professeurs{% endblock %}
+
+{% block body %}
+<div class="content">
+<div id="idchoix">
+<a id="choix" class="btn btn-success" href="{{path('Create_Prof')}}" role="button">Ajouter un professeur</a>
+<a id="choix" class="btn btn-success" href="{{path('Create_spec')}}" role="button">Ajouter une specialité</a>
+<a id="choix" class="btn btn-success" href="#" role="button">Ajouter un emploi</a>
+<a id="choixun" class="btn btn-success" href="{{path('Create_Classe')}}" role="button">Ajouter une Classe</a>
+<a id="choixun" class="btn btn-success" href="{{path('Create_Etud')}}" >Ajouter un étudiant</a>
+</div>
+
+  {% for profs in prof %}
+        <p>
+        <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseExample{{profs.id}}" aria-expanded="false" aria-controls="collapseExample{{profs.id}}">
+           Professeur N*{{profs.id}} : {{profs.getPrenom}}  {{profs.getNom}} 
+        </button>
+		</p>
+		<div class="collapse" id="collapseExample{{profs.id}}">
+
+  		<div class="card card-body">
+
+  		<div class="mat">  {{profs.getDescription}} </div>
+  		
+
+  		</div>
+</div>
+  {% endfor %}
+
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+

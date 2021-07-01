@@ -1,0 +1,60 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Les cours{% endblock %}
+
+{% block body %}
+<div class="content">
+<div id="idchoix">
+<a id="choix" class="btn btn-success" href="{{path('Create_cours')}}" role="button">Ajouter un cours</a>
+<a id="choix" class="btn btn-success" href="{{path('Create_Niveau')}}" role="button">Ajouter un niveau</a>
+<a id="choix" class="btn btn-success" href="{{path('Create_Mat')}}" role="button">Ajouter une matière</a>
+</div>
+{% for niveaux in niveau %} 
+
+<p>
+  <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseExample{{niveaux.id}}" aria-expanded="false" aria-controls="collapseExample{{niveaux.id}}">
+   {{niveaux.getTitle}}
+  </button>
+  <li class="list-inline-item">
+  <a href="{{path('Edit_Niveau', { id: niveaux.id })}}" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+  </li>
+  <li class="list-inline-item">
+  <a href="{{path('Delete_Niveau', { id: niveaux.id })}}" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+  </li>
+</p>
+<div class="collapse" id="collapseExample{{niveaux.id}}">
+
+  <div class="card card-body">
+  {% for matieres in niveaux.getMatieres %}
+
+  <div class="mat">  {{matieres.getTitle}}
+  <div id="icon">
+  <li class="list-inline-item">
+  <a href="{{path('Edit_Mat', { id: matieres.id })}}" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+  </li>
+  <li class="list-inline-item">
+  <a href="{{path('Delete_matieres', { id: matieres.id })}}" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+  </li>
+  </div>
+  </div>
+  
+  {% for cours in matieres.getCours %}
+  <div class="cours">  {{cours.id}} : {{cours.getTitle}} 
+  <div id="icon">
+  <li class="list-inline-item">
+  <a href="{{path('Edit_cours', { id: cours.id })}}" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+  </li>
+  <li class="list-inline-item">
+  <a href="{{path('Delete_cours', { id: cours.id })}}" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+  </li>
+  </div>
+  </div>
+  {% endfor %}
+  
+  {% endfor %}
+
+  </div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}

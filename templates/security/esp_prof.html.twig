@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Espace Professeurs{% endblock %}
+
+{% block body %}
+<div class="content">
+<div class="title"> Classes </div>
+
+{% for class in classe %}
+
+    <div class="list-group-item list-group-item-action list-group-item-primary">{{class.getTitle}}</div>
+    
+    <div class="cont">
+    <div class="headb">Les Professeurs</div>
+    <div class="bodyp">
+    {% for profs in class.getProfesseur %}
+    {{profs.getPrenom}} {{profs.getNom}} <br>
+    {% endfor %}
+    </div>
+    </div>
+    <div class="cont">
+    <div class="headb">Les étudiants</div>
+    <div class="bodyp">
+    {% for etud in class.getEtudiant %}
+    {{etud.getPrenom}}  {{etud.getNom}} <br>
+    {% endfor %}
+    </div>
+    </div>
+    
+{% endfor %}
+
+</div>
+
+
+
+{% endblock %}
